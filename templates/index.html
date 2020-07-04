@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Indian Currency Notes Classifier:</h2>
+<br>
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <h4>Please Choose any Indian Currency Note to get the predictions.</h4>
+        <label for="imageUpload" class="upload-label">
+            Please Choose..
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+    <br>
+    <div style="background-color:#010200">
+    <p style="color:white;text-align:center;" >Developed By: <b>Gaurav R. Sahani</b> </p>
+    </div>
+
+</div>
+
+{% endblock %}
